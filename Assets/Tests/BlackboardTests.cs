@@ -1,8 +1,4 @@
-using System;
-using System.Globalization;
 using NUnit.Framework;
-using UnityEngine;
-using AI;
 
 namespace AI.Test
 {
@@ -60,6 +56,38 @@ namespace AI.Test
 			blackboard.Set<int>(key, originalValue);
 			var accessedValue = blackboard.Get<int>(key);
 			Assert.True(originalValue == accessedValue);
+		}
+
+		[Test]
+		public void MultiIntTest()
+		{
+			var originalValue1 = 123;
+			var originalValue2 = int.MaxValue;
+			var originalValue3 = int.MinValue;
+			var originalValue4 = -123456789;
+
+			var key1 = new BlackboardKey("Int Test 1");
+			var key2 = new BlackboardKey("Int Test 2");
+			var key3 = new BlackboardKey("Int Test 3");
+			var key4 = new BlackboardKey("Int Test 4");
+
+			var blackboard = new Blackboard();
+			blackboard.Set<int>(key1, originalValue1);
+			blackboard.Set<int>(key2, originalValue2);
+			blackboard.Set<int>(key3, originalValue3);
+			blackboard.Set<int>(key4, originalValue4);
+			
+			var accessedValue1 = blackboard.Get<int>(key1);
+			Assert.True(originalValue1 == accessedValue1);
+
+			var accessedValue2 = blackboard.Get<int>(key2);
+			Assert.True(originalValue2 == accessedValue2);
+
+			var accessedValue3 = blackboard.Get<int>(key3);
+			Assert.True(originalValue3 == accessedValue3);
+
+			var accessedValue4 = blackboard.Get<int>(key4);
+			Assert.True(originalValue4 == accessedValue4);
 		}
 	}
 }
