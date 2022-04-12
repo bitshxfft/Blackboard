@@ -53,7 +53,7 @@ namespace AI.Test
 			var originalValue = 123;
 			var blackboard = new Blackboard();
 			var key = new BlackboardKey("Int Test");
-			blackboard.Set<int>(key, originalValue);
+			blackboard.Set(key, originalValue);
 			var accessedValue = blackboard.Get<int>(key);
 			Assert.True(originalValue == accessedValue);
 		}
@@ -72,10 +72,10 @@ namespace AI.Test
 			var key4 = new BlackboardKey("Int Test 4");
 
 			var blackboard = new Blackboard();
-			blackboard.Set<int>(key1, originalValue1);
-			blackboard.Set<int>(key2, originalValue2);
-			blackboard.Set<int>(key3, originalValue3);
-			blackboard.Set<int>(key4, originalValue4);
+			blackboard.Set(key1, originalValue1);
+			blackboard.Set(key2, originalValue2);
+			blackboard.Set(key3, originalValue3);
+			blackboard.Set(key4, originalValue4);
 			
 			var accessedValue1 = blackboard.Get<int>(key1);
 			Assert.True(originalValue1 == accessedValue1);
@@ -88,6 +88,46 @@ namespace AI.Test
 
 			var accessedValue4 = blackboard.Get<int>(key4);
 			Assert.True(originalValue4 == accessedValue4);
+		}
+
+		[Test]
+		public void InvalidKeyTest()
+		{
+			var originalValue = 123;
+
+			var correctKey = new BlackboardKey("IntKey");
+			var incorrectKey = new BlackboardKey("FailKey");
+
+			var blackboard = new Blackboard();
+			blackboard.Set(correctKey, originalValue);
+
+			var accessedValue = blackboard.Get<int>(incorrectKey);
+			Assert.False(originalValue == accessedValue);
+			Assert.True(accessedValue == default);
+		}
+
+		[Test]
+		public void InvalidAccessorTest()
+		{
+			var originalValue = 123;
+			var key = new BlackboardKey("IntKey");
+
+			var blackboard = new Blackboard();
+			var validAccessor = blackboard.CreateAccessor<int>(key);
+			blackboard.Set(validAccessor, originalValue);
+			
+			var invalidTypeAccessor = new BlackboardIndex(validAccessor.TypeIndex + 1, validAccessor.ValueIndex);
+			var invalidValueAccessor = new BlackboardIndex(validAccessor.TypeIndex, validAccessor.ValueIndex + 1);
+
+			// #TODO: should this throw? currently it does
+			var invalidTypeResult = blackboard.Get<int>(invalidTypeAccessor);
+			Assert.False(originalValue == invalidTypeResult);
+			Assert.True(invalidTypeResult == default);
+
+			// #TODO: should this throw? currently it does
+			var invalidValueResult = blackboard.Get<int>(invalidValueAccessor);
+			Assert.False(originalValue == invalidValueResult);
+			Assert.True(invalidValueResult == default);
 		}
 	}
 }

@@ -22,7 +22,7 @@ namespace AI
 				m_TypeIndices.Add(type, typeIndex);
 
 				var values = new List<T>();
-				m_Values.Add((IList)values);
+				m_Values.Add(values);
 				m_valueIndices.Add(new Dictionary<int, int>());
 			}
 
