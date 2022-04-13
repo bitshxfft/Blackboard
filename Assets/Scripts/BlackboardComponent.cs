@@ -16,17 +16,6 @@ namespace BitwiseAI
 		private void Awake()
 		{
 			m_Blackboard = new Blackboard();
-
-			m_Blackboard.Set(new BlackboardKey("Test int"), 123);
-			m_Blackboard.Set(new BlackboardKey("Test char"), (char)123);
-			m_Blackboard.Set(new BlackboardKey("Test short"), (short)123);
-			m_Blackboard.Set(new BlackboardKey("Test ushort"), (ushort)123);
-			m_Blackboard.Set(new BlackboardKey("Test BlackboardComponent"), this);
-			m_Blackboard.Set(new BlackboardKey("Test string"), "Test string");
-			m_Blackboard.Set(new BlackboardKey("Test Blackboard Key"), new BlackboardKey("Inner key"));
-			m_Blackboard.Set(new BlackboardKey("Test Vector2"), new Vector2(123.4f, 567.89f));
-			m_Blackboard.Set(new BlackboardKey("Test Vector3"), new Vector3(12.3f, 45.6f, 78.9f));
-			m_Blackboard.Set(new BlackboardKey("Test Vector2Int"), new Vector2Int(123, 456));
 		}
 
 		// ----------------------------------------------------------------------------
