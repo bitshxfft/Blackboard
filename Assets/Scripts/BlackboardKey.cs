@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 #endif // UNITY_EDITOR
 
-namespace AI
+namespace BitwiseAI
 {
 	[Serializable]
 	public struct BlackboardKey

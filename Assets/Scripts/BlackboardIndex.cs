@@ -1,4 +1,4 @@
-namespace AI
+namespace BitwiseAI
 {
 	public readonly struct BlackboardIndex
 	{

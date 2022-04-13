@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace AI.Test
+namespace BitwiseAI.Test
 {
 	public class BlackboardTest
 	{
@@ -120,13 +120,13 @@ namespace AI.Test
 
 			var blackboard = new Blackboard();
 			var validAccessor = blackboard.CreateAccessor<int>(key);
-			blackboard.Set(validAccessor, originalValue);
+			blackboard.QuickSet(validAccessor, originalValue);
 			
 			var invalidTypeAccessor = new BlackboardIndex(validAccessor.TypeIndex + 1, validAccessor.ValueIndex);
-			Assert.Throws<System.ArgumentOutOfRangeException>(() => { blackboard.Get<int>(invalidTypeAccessor); });
+			Assert.Throws<System.ArgumentOutOfRangeException>(() => { blackboard.QuickGet<int>(invalidTypeAccessor); });
 
 			var invalidValueAccessor = new BlackboardIndex(validAccessor.TypeIndex, validAccessor.ValueIndex + 1);
-			Assert.Throws<System.ArgumentOutOfRangeException>(() => { blackboard.Get<int>(invalidValueAccessor); });
+			Assert.Throws<System.ArgumentOutOfRangeException>(() => { blackboard.QuickGet<int>(invalidValueAccessor); });
 		}
 	}
 }

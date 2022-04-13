@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -1920
+    x: 0
     y: 43
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 27
+  controlID: 94
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -94,14 +94,14 @@ MonoBehaviour:
     y: 520
     width: 1098
     height: 427
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -171,8 +171,8 @@ MonoBehaviour:
     y: 0
     width: 411
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -347,7 +347,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1509
+    x: 411
     y: 593
     width: 1096
     height: 406
@@ -356,7 +356,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 233
+    ID: 117
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -422,9 +422,9 @@ MonoBehaviour:
       uniqueId: '[Blackboard][suite]'
       name: Blackboard
       fullName: Blackboard
-      resultStatus: 2
-      duration: 0.0315148
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0336324
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -434,13 +434,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1008
+    - id: 1009
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Dev/Blackboard/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 0.0133084
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0111081
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -450,29 +450,13 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[Blackboard][suite]'
-    - id: 1009
-      uniqueId: Tests.dll/[AI][suite]
-      name: AI
-      fullName: AI
-      resultStatus: 2
-      duration: 0.0116899
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1008
-      parentUniqueId: '[Tests.dll][suite]'
     - id: 1010
-      uniqueId: Tests.dll/AI/[Tests][AI.Test][suite]
-      name: Test
-      fullName: AI.Test
-      resultStatus: 2
-      duration: 0.0085167
-      messages: One or more child tests had errors
+      uniqueId: Tests.dll/[BitwiseAI][suite]
+      name: BitwiseAI
+      fullName: BitwiseAI
+      resultStatus: 1
+      duration: 0.0106844
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -481,14 +465,14 @@ MonoBehaviour:
       isSuite: 1
       categories: []
       parentId: 1009
-      parentUniqueId: Tests.dll/[AI][suite]
-    - id: 1001
-      uniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
-      name: BlackboardTest
-      fullName: AI.Test.BlackboardTest
-      resultStatus: 2
-      duration: 0.0043879
-      messages: One or more child tests had errors
+      parentUniqueId: '[Tests.dll][suite]'
+    - id: 1011
+      uniqueId: Tests.dll/BitwiseAI/[Tests][BitwiseAI.Test][suite]
+      name: Test
+      fullName: BitwiseAI.Test
+      resultStatus: 1
+      duration: 0.0074415
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -497,13 +481,29 @@ MonoBehaviour:
       isSuite: 1
       categories: []
       parentId: 1010
-      parentUniqueId: Tests.dll/AI/[Tests][AI.Test][suite]
+      parentUniqueId: Tests.dll/[BitwiseAI][suite]
+    - id: 1001
+      uniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
+      name: BlackboardTest
+      fullName: BitwiseAI.Test.BlackboardTest
+      resultStatus: 1
+      duration: 0.0043421
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1011
+      parentUniqueId: Tests.dll/BitwiseAI/[Tests][BitwiseAI.Test][suite]
     - id: 1002
-      uniqueId: Tests.dll/AI/Test/BlackboardTest/[Tests][AI.Test.BlackboardTest.IntAccessorTest]
+      uniqueId: Tests.dll/BitwiseAI/Test/BlackboardTest/[Tests][BitwiseAI.Test.BlackboardTest.IntAccessorTest]
       name: IntAccessorTest
-      fullName: AI.Test.BlackboardTest.IntAccessorTest
+      fullName: BitwiseAI.Test.BlackboardTest.IntAccessorTest
       resultStatus: 1
-      duration: 0.0086019
+      duration: 0.0000836
       messages: 
       output: 
       stacktrace: 
@@ -514,13 +514,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
+      parentUniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
     - id: 1005
-      uniqueId: Tests.dll/AI/Test/BlackboardTest/[Tests][AI.Test.BlackboardTest.IntTest]
+      uniqueId: Tests.dll/BitwiseAI/Test/BlackboardTest/[Tests][BitwiseAI.Test.BlackboardTest.IntTest]
       name: IntTest
-      fullName: AI.Test.BlackboardTest.IntTest
+      fullName: BitwiseAI.Test.BlackboardTest.IntTest
       resultStatus: 1
-      duration: 0.0003318
+      duration: 0.0000521
       messages: 
       output: 
       stacktrace: 
@@ -531,27 +531,16 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
+      parentUniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
     - id: 1008
-      uniqueId: Tests.dll/AI/Test/BlackboardTest/[Tests][AI.Test.BlackboardTest.InvalidAccessorTest]
+      uniqueId: Tests.dll/BitwiseAI/Test/BlackboardTest/[Tests][BitwiseAI.Test.BlackboardTest.InvalidAccessorTest]
       name: InvalidAccessorTest
-      fullName: AI.Test.BlackboardTest.InvalidAccessorTest
-      resultStatus: 2
-      duration: 0.0002345
-      messages: 'System.ArgumentOutOfRangeException : Index was out of range. Must
-        be non-negative and less than the size of the collection.
-
-        Parameter
-        name: index'
+      fullName: BitwiseAI.Test.BlackboardTest.InvalidAccessorTest
+      resultStatus: 1
+      duration: 0.000112
+      messages: 
       output: 
-      stacktrace: "  at System.Collections.Generic.List`1[T].get_Item (System.Int32
-        index) [0x00009] in <00c558282d074245ab3496e2d108079b>:0 \r\n  at AI.Blackboard.Get[T]
-        (AI.BlackboardIndex& index) [0x00000] in C:\\Dev\\Blackboard\\Assets\\Scripts\\Blackboard.cs:70
-        \r\n  at AI.Test.BlackboardTest.InvalidAccessorTest () [0x00054] in C:\\Dev\\Blackboard\\Assets\\Tests\\BlackboardTests.cs:122
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <00c558282d074245ab3496e2d108079b>:0 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -559,13 +548,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
+      parentUniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
     - id: 1007
-      uniqueId: Tests.dll/AI/Test/BlackboardTest/[Tests][AI.Test.BlackboardTest.InvalidKeyTest]
+      uniqueId: Tests.dll/BitwiseAI/Test/BlackboardTest/[Tests][BitwiseAI.Test.BlackboardTest.InvalidKeyTest]
       name: InvalidKeyTest
-      fullName: AI.Test.BlackboardTest.InvalidKeyTest
+      fullName: BitwiseAI.Test.BlackboardTest.InvalidKeyTest
       resultStatus: 1
-      duration: 0.0002613
+      duration: 0.0000389
       messages: 
       output: 
       stacktrace: 
@@ -576,13 +565,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
+      parentUniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
     - id: 1003
-      uniqueId: Tests.dll/AI/Test/BlackboardTest/[Tests][AI.Test.BlackboardTest.MultiIntAccessorTest]
+      uniqueId: Tests.dll/BitwiseAI/Test/BlackboardTest/[Tests][BitwiseAI.Test.BlackboardTest.MultiIntAccessorTest]
       name: MultiIntAccessorTest
-      fullName: AI.Test.BlackboardTest.MultiIntAccessorTest
+      fullName: BitwiseAI.Test.BlackboardTest.MultiIntAccessorTest
       resultStatus: 1
-      duration: 0.000218
+      duration: 0.0000741
       messages: 
       output: 
       stacktrace: 
@@ -593,13 +582,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
+      parentUniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
     - id: 1006
-      uniqueId: Tests.dll/AI/Test/BlackboardTest/[Tests][AI.Test.BlackboardTest.MultiIntTest]
+      uniqueId: Tests.dll/BitwiseAI/Test/BlackboardTest/[Tests][BitwiseAI.Test.BlackboardTest.MultiIntTest]
       name: MultiIntTest
-      fullName: AI.Test.BlackboardTest.MultiIntTest
+      fullName: BitwiseAI.Test.BlackboardTest.MultiIntTest
       resultStatus: 1
-      duration: 0.0003602
+      duration: 0.0000368
       messages: 
       output: 
       stacktrace: 
@@ -610,13 +599,13 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
+      parentUniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
     - id: 1004
-      uniqueId: Tests.dll/AI/Test/BlackboardTest/[Tests][AI.Test.BlackboardTest.MultiKeyAccessorTest]
+      uniqueId: Tests.dll/BitwiseAI/Test/BlackboardTest/[Tests][BitwiseAI.Test.BlackboardTest.MultiKeyAccessorTest]
       name: MultiKeyAccessorTest
-      fullName: AI.Test.BlackboardTest.MultiKeyAccessorTest
+      fullName: BitwiseAI.Test.BlackboardTest.MultiKeyAccessorTest
       resultStatus: 1
-      duration: 0.001041
+      duration: 0.0000416
       messages: 
       output: 
       stacktrace: 
@@ -627,30 +616,14 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: Tests.dll/AI/Test/[Tests][AI.Test.BlackboardTest][suite]
-    m_ResultText: "InvalidAccessorTest (0.000s)\n---\nSystem.ArgumentOutOfRangeException
-      : Index was out of range. Must be non-negative and less than the size of the
-      collection.\r\nParameter name: index\n---\nat System.Collections.Generic.List`1[T].get_Item
-      (System.Int32 index) [0x00009] in <00c558282d074245ab3496e2d108079b>:0 \r\n 
-      at AI.Blackboard.Get[T] (AI.BlackboardIndex& index) [0x00000] in C:\\Dev\\Blackboard\\Assets\\Scripts\\Blackboard.cs:70
-      \r\n  at AI.Test.BlackboardTest.InvalidAccessorTest () [0x00054] in C:\\Dev\\Blackboard\\Assets\\Tests\\BlackboardTests.cs:122
-      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <00c558282d074245ab3496e2d108079b>:0"
-    m_ResultStacktrace: "  at System.Collections.Generic.List`1[T].get_Item (System.Int32
-      index) [0x00009] in <00c558282d074245ab3496e2d108079b>:0 \r\n  at AI.Blackboard.Get[T]
-      (AI.BlackboardIndex& index) [0x00000] in C:\\Dev\\Blackboard\\Assets\\Scripts\\Blackboard.cs:70
-      \r\n  at AI.Test.BlackboardTest.InvalidAccessorTest () [0x00054] in C:\\Dev\\Blackboard\\Assets\\Tests\\BlackboardTests.cs:122
-      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <00c558282d074245ab3496e2d108079b>:0 "
+      parentUniqueId: Tests.dll/BitwiseAI/Test/[Tests][BitwiseAI.Test.BlackboardTest][suite]
+    m_ResultText: BitwiseAI (0.011s)
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ba33309f
-      m_LastClickedID: -1624230982
-      m_ExpandedIDs: 0efda5cfcab908e0e557abf78b6d804e4cf05a6cffffff7f
+      m_SelectedIDs: 0d5045a8
+      m_LastClickedID: -1471852531
+      m_ExpandedIDs: 0d5045a80efda5cfcab908e0e557abf78b6d804e4cf05a6cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -696,7 +669,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
+    x: 0
     y: 593
     width: 410
     height: 406
@@ -731,7 +704,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 8a570000
     m_LastClickedID: 22410
-    m_ExpandedIDs: 00000000e0470000e2470000
+    m_ExpandedIDs: 000000000c4800000e4800001048000012480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -759,7 +732,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e0470000e2470000
+    m_ExpandedIDs: ffffffff000000000c4800000e4800001048000012480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -835,7 +808,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -411
+    x: 1509
     y: 73
     width: 410
     height: 926
@@ -876,7 +849,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
+    x: 0
     y: 73
     width: 410
     height: 499
@@ -887,9 +860,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: e2f3ffff54f4ffff96f7ffff04f8ffff2cf9ffff3afbffff
+      m_SelectedIDs: 86d7ffff
+      m_LastClickedID: -10362
+      m_ExpandedIDs: aef8ffffe2f8ffff5cf9ffff3afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -905,7 +878,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -933,7 +906,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1509
+    x: 411
     y: 73
     width: 1096
     height: 499
@@ -1238,10 +1211,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2283
+    x: 411
     y: 73
-    width: 1101
-    height: 489
+    width: 1096
+    height: 499
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1252,7 +1225,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1101, y: 468}
+  m_TargetSize: {x: 1096, y: 478}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1267,10 +1240,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -550.5
-    m_HBaseRangeMax: 550.5
-    m_VBaseRangeMin: -234
-    m_VBaseRangeMax: 234
+    m_HBaseRangeMin: -548
+    m_HBaseRangeMax: 548
+    m_VBaseRangeMin: -239
+    m_VBaseRangeMax: 239
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1279,7 +1252,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1288,23 +1261,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1101
-      height: 468
+      width: 1096
+      height: 478
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 550.5, y: 234}
+    m_Translation: {x: 548, y: 239}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -550.5
-      y: -234
-      width: 1101
-      height: 468
+      x: -548
+      y: -239
+      width: 1096
+      height: 478
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1101, y: 489}
+  m_LastWindowPixelSize: {x: 1096, y: 499}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1330,7 +1303,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1509
+    x: 411
     y: 593
     width: 1096
     height: 406
