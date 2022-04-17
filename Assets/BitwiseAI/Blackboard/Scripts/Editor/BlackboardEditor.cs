@@ -32,6 +32,7 @@ namespace BitwiseAI.Blackboard.Editor
 			{
 				s_ActiveWindow = CreateWindow<BlackboardEditor>();
 				s_ActiveWindow.minSize = new Vector2(100.0f, 100.0f);
+				s_ActiveWindow.titleContent = new GUIContent("Blackboard");
 				s_ActiveWindow.m_Blackboard = blackboard;
 				s_ActiveWindow.PopulateInspectors();
 			}
