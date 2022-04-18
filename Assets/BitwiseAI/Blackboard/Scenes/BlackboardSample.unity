@@ -121,36 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &231133512
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 231133513}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &231133513
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231133512}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,36 +204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &734784865
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 734784866}
-  m_Layer: 0
-  m_Name: Grenade
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &734784866
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734784865}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572461968
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,45 +260,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ede6e9c587ebd41a8f396ef28b35e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HealthKey:
-    m_Key: Health Value
-    m_Hash: -416472397
-  m_HealthPercentageKey:
-    m_Key: Health Percentage
-    m_Hash: -789048796
-  m_ShieldKey:
-    m_Key: Shield Level
-    m_Hash: -1653191595
-  m_NameKey:
-    m_Key: Name
-    m_Hash: -1966747349
-  m_FactionKey:
-    m_Key: Faction
-    m_Hash: -168968830
-  m_PriTargetKey:
-    m_Key: Primary Target
-    m_Hash: 452810121
-  m_SecTargetKey:
-    m_Key: Secondary Target
-    m_Hash: -1515078569
-  m_HazardKey:
-    m_Key: Hazard
-    m_Hash: -457943254
   m_DeltaTimeKey:
     m_Key: DeltaTime
     m_Hash: -653983135
-  m_SeedKey:
-    m_Key: Seed
-    m_Hash: -158743929
-  m_AttackTreeKey:
-    m_Key: BehaviourTree Combat
-    m_Hash: 1498447365
-  m_SearchTreeKey:
-    m_Key: BehaviourTree Search
-    m_Hash: -2099630047
-  m_IdleTreeKey:
-    m_Key: BehaviourTree Idle
-    m_Hash: -224626121
-  m_PriorityKey:
-    m_Key: PriorityIndex
-    m_Hash: 835835838
+  m_FrameKey:
+    m_Key: Frame
+    m_Hash: -1140352503
+  m_TransformKey:
+    m_Key: Transform Example
+    m_Hash: 463686388
+  m_GameObjectKey:
+    m_Key: GameObject Example
+    m_Hash: 1080130047
+  m_FrameDataStringKey:
+    m_Key: String Example
+    m_Hash: -457988359
