@@ -6,7 +6,7 @@ namespace BitwiseAI.Blackboard.Editor
 	public class GameObjectInspector
 	{
 		public static object Inspect(object gameObject)
-			=> UnityEditor.EditorGUILayout.ObjectField((UnityEngine.Object)gameObject, gameObject.GetType(), true);
+			=> UnityEditor.EditorGUILayout.ObjectField((UnityEngine.GameObject)gameObject, typeof(UnityEngine.GameObject), true);
 	}
 }
 

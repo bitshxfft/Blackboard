@@ -23,7 +23,7 @@ namespace BitwiseAI.Blackboard
 		}
 
 		[CustomEditor(typeof(BlackboardComponent))]
-		public class BehaviourTreeRunnerComponentEditor : UnityEditor.Editor
+		public class BlackboardComponentEditor : UnityEditor.Editor
 		{
 			public override void OnInspectorGUI()
 			{

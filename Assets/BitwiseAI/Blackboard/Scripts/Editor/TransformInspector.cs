@@ -6,7 +6,7 @@ namespace BitwiseAI.Blackboard.Editor
 	public class TransformInspector
 	{
 		public static object Inspect(object transformObject)
-			=> UnityEditor.EditorGUILayout.ObjectField((UnityEngine.Object)transformObject, transformObject.GetType(), true);
+			=> UnityEditor.EditorGUILayout.ObjectField((UnityEngine.Transform)transformObject, typeof(UnityEngine.Transform), true);
 	}
 }
 

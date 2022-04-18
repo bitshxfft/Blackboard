@@ -55,13 +55,15 @@ namespace BitwiseAI.Blackboard.Sample
 				{
 					m_Blackboard.QuickSet(m_DeltaTimeAccessor, Time.deltaTime);
 					m_Blackboard.QuickSet(m_FrameAccessor, Time.frameCount);
-					m_Blackboard.QuickSet(m_FrameDataStringAccessor, $"Time: {Time.time:0.00}, Frame {Time.frameCount}, Delta Time: {Time.deltaTime:0.000}");
+					m_Blackboard.QuickSet(m_FrameDataStringAccessor, 
+						$"Time: {Time.time:0.00}, Frame {m_Blackboard.QuickGet<int>(m_FrameAccessor)}, Delta Time: {m_Blackboard.QuickGet<int>(m_DeltaTimeAccessor):0.000}");
 				}
 				else
 				{
 					m_Blackboard.Set(m_DeltaTimeKey, Time.deltaTime);
 					m_Blackboard.Set(m_FrameKey, Time.frameCount);
-					m_Blackboard.Set(m_FrameDataStringKey, $"Time: {Time.time:0.00}, Frame {Time.frameCount}, Delta Time: {Time.deltaTime:0.000}");
+					m_Blackboard.Set(m_FrameDataStringKey,
+						$"Time: {Time.time:0.00}, Frame {m_Blackboard.Get<int>(m_FrameKey)}, Delta Time: {m_Blackboard.Get<float>(m_DeltaTimeKey):0.000}");
 				}
 			}
 		}
